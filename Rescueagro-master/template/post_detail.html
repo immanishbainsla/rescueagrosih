@@ -1,0 +1,26 @@
+{% extends 'usersappbase.html' %}
+{% block body_block %}
+{% load custom_tags %}
+  <div class="jumbotron">
+    <h1>Welcome to the Posts detail page.</h1>
+    <h2>Post details</h2>
+    <p>Name - {{post_detail.name}}</p>
+    <p>Description - {{post_detail.description}}</p>
+    <p>Location - {{post_detail.landmark}} {{post_detail.town}} {{post_detail.dist}}{{post_detail.state}} {{post_detail.pin}}</p>
+    <p>Time Posted - {{post_detail.itime}}</p>
+
+
+  </div>
+
+  <div class="container">
+  {% with name=request.user|check %}
+  {% if id == name %}
+
+    <p><a class="btn btn-warning" href="{% url 'reg:update' pk=post_detail.pk %}">Update</a></p>
+    <p><a class="btn btn-danger" href="{% url 'reg:delete' pk=post_detail.pk %}">Email me</a></p>
+    {% else%}
+    {% endif%}
+  {% endwith %}
+  </div>
+
+{% endblock %}

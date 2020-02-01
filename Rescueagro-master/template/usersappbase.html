@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BASE.HTML</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dafault navbar-static-top">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="{%url 'reg:list'%}" class="navbar-brand">Posts</a></li>
+        <li class="nav-item"><a href="{%url 'reg:create'%}" class="navbar-brand">Create</a></li>
+        
+        <!-- <li class="nav-item"><a href="{%url 'reg:list'%}" class="navbar-link">Home</a></li> -->
+
+      </ul>
+
+    </nav>
+    <div class="container">
+      {% block body_block %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

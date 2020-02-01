@@ -1,0 +1,14 @@
+{% extends 'usersappbase.html' %}
+{% block body_block %}
+
+  <div class="jumbotron">
+    <h1>Delete {{post.name}}?</h1>
+    <form method="POST">
+      {% csrf_token %}
+      {{ form.as_p}}
+      <input type="submit" class="btn btn-danger" value="Delete">
+      <a href="{% url 'usersapp:detail' pk=post.pk %}">Cancel</a>
+    </form>
+  </div>
+
+{% endblock %}

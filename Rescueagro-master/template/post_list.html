@@ -1,0 +1,13 @@
+{% extends 'usersappbase.html' %}
+{% block body_block %}
+
+  <div class="jumbotron">
+    <h1>Welcome to a list of all the Posts.</h1>
+    <ol>
+      {%for post in posts%}
+      <h3><li><a href="{{post.id}}">{{post.name}}</a></li></h3>
+      {%endfor%}
+    </ol>
+  </div>
+
+{% endblock %}
