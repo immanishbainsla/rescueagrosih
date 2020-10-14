@@ -1,7 +1,8 @@
 # RescueAgro
 
 - RescurAgro is web application that was built by four Computer Science Engg student against the food security.
-- Team: 1. Aman Kumar
+- Team: <br />
+        1. Aman Kumar
         <br />
         2. Kranti Prasad
         <br />
