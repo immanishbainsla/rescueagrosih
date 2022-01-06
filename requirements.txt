@@ -9,7 +9,7 @@ autobahn==19.9.3
 Automat==0.7.0
 beautifulsoup4==4.8.1
 billiard==3.3.0.23
-celery==3.1.26.post2
+celery==5.2.2
 certifi==2019.6.16
 cffi==1.12.3
 channels==2.3.0
